@@ -9,6 +9,14 @@
 \description{
 Package for all functions I will use
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/HarivanshL/Math4753Hari}
+  \item Report bugs at \url{https://github.com/HarivanshL/Math4753Hari/issues}
+}
+
+}
 \author{
 Harivansh Luchmun
 }
