@@ -7,8 +7,9 @@
 #' @param N total number of seats available
 #' @param gamma the probability that a plane will be overbooked
 #' @param p is the probability that a person will show
-#'
-#'
+#' @importFrom grDevices rainbow
+#' @importFrom graphics abline axis barplot curve hist layout lines points polygon segments text
+#' @importFrom stats dnorm dpois pbinom pnorm quantile rpois t.test var
 #' @example ntickets(100, gamma, p)
 #'
 #' @export

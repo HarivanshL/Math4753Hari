@@ -6,7 +6,10 @@
 #' @param x the samples
 #' @param fun the function you want to calculate
 #' @param alpha used to generate the desired confidence interval
-#'
+#' @param ... arguments to change specific parts
+#' @importFrom grDevices rainbow
+#' @importFrom graphics abline axis barplot curve hist layout lines points polygon segments text
+#' @importFrom stats dnorm dpois pbinom pnorm quantile rpois t.test var
 #' @return a list containing the confidence interval ci, xstat (iter samples), x (the samples), the function
 #'
 #' @example myboot(x=c(10,20,40,50,60,1,20,40,20))
@@ -18,7 +21,7 @@ myboot<-function(iter=10000,x,fun="mean",alpha=0.05,...){
   #Now sample with replacement
   y=sample(x,n*iter,replace=TRUE) #A
   # Make a matrix with all the resampled values
-  rs.mat=matrix(y,nr=n,nc=iter,byrow=TRUE)
+  rs.mat=matrix(y,nrow=n,ncol=iter,byrow=TRUE)
   xstat=apply(rs.mat,2,fun)
   # xstat is a vector and will have iter values in it
   ci=quantile(xstat,c(alpha/2,1-alpha/2)) #B
@@ -30,7 +33,7 @@ myboot<-function(iter=10000,x,fun="mean",alpha=0.05,...){
 statistics",...)
   #mat will be a matrix that contains the data, this is done so that I
   #can use apply()
-  mat=matrix(x,nr=length(x),nc=1,byrow=TRUE)
+  mat=matrix(x,nrow=length(x),ncol=1,byrow=TRUE)
   #pte is the point estimate
   #This uses whatever fun is
   pte=apply(mat,2,fun)

@@ -2,8 +2,9 @@
 #'
 #'
 #' @param x is the value of samples
-#'
-#'
+#' @importFrom grDevices rainbow
+#' @importFrom graphics abline axis barplot curve hist layout lines points polygon segments text
+#' @importFrom stats dnorm dpois pbinom pnorm quantile rpois t.test var
 #' @example myci(x=c(9,9,1,9,9,9))
 #'
 #' @export

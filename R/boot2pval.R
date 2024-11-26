@@ -4,12 +4,13 @@
 #'
 #' @param x1 is the first sample
 #' @param x2 is the second sample
-#' @conf.level is the confidence level
-#' @iter is the amount of times
-#' @mudiff is the difference in means
-#' @test is the type of test
-#'
-#'
+#' @param conf.level is the confidence level
+#' @param iter is the amount of times
+#' @param mudiff is the difference in means
+#' @param test is the type of test
+#' @importFrom grDevices rainbow
+#' @importFrom graphics abline axis barplot curve hist layout lines points polygon segments text
+#' @importFrom stats dnorm dpois pbinom pnorm quantile rpois t.test var
 #' @example boot2pval(x1=c(9,9,1,9,9,9), x2=c(23,5,4, 5,9, 2)
 #'
 #' @export
@@ -49,7 +50,7 @@ boot2pval<-function(x1,x2,conf.level=0.95,iter=3000,mudiff=0, test="two"){
   #ci=quantile(xstat,c(alpha/2,1-alpha/2))# Nice way to form a confidence interval
   pvalue=ifelse(test=="two",length(tstat[tstat>abs(tcalc) | tstat < -abs(tcalc)])/iter,
                 ifelse(test=="upper",length(tstat[tstat>tcalc])/iter,
-                       length(ytstat[tstat<tcalc])/iter))
+                       length(tstat[tstat<tcalc])/iter))
 
   h=hist(tstat,plot=FALSE)
   mid=h$mid

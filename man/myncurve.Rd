@@ -4,17 +4,16 @@
 \alias{myncurve}
 \title{Function to plot a normal curve and region while giving the area of the region}
 \usage{
-myncurve(mu, sigma, a = 1)
+myncurve(x, mu, sigma, a = 1)
 }
 \arguments{
+\item{x}{is the vector of values}
+
 \item{mu}{the mean of the distribution}
 
 \item{sigma}{the standard deviation of the distribution}
 
 \item{a}{the value of x you want to evaluate at}
-}
-\value{
-the plotted curve with the region and the area of the region
 }
 \description{
 Function to plot a normal curve and region while giving the area of the region

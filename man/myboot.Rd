@@ -14,6 +14,8 @@ myboot(iter = 10000, x, fun = "mean", alpha = 0.05, ...)
 \item{fun}{the function you want to calculate}
 
 \item{alpha}{used to generate the desired confidence interval}
+
+\item{...}{arguments to change specific parts}
 }
 \value{
 a list containing the confidence interval ci, xstat (iter samples), x (the samples), the function

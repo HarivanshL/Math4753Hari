@@ -6,7 +6,10 @@
 #' @param n total number of samples
 #' @param iter the number of times to iterate per sample
 #' @param lambda the average number of events in the time interval
-#'
+#' @param ... arguments to change specific parts
+#' @importFrom grDevices rainbow
+#' @importFrom graphics abline axis barplot curve hist layout lines points polygon segments text
+#' @importFrom stats dnorm dpois pbinom pnorm quantile rpois t.test var
 #'
 #' @example mycltp(20, 10000, 4)
 #'
@@ -17,7 +20,7 @@ mycltp=function(n,iter,lambda=10,...){
   y=rpois(n*iter,lambda=lambda)
   ## Place these numbers into a matrix
   ## The columns will correspond to the iteration and the rows will equal the sample size n
-  data=matrix(y,nr=n,nc=iter,byrow=TRUE)
+  data=matrix(y,nrow=n,ncol=iter,byrow=TRUE)
   ## apply the function mean to the columns (2) of the matrix
   ## these are placed in a vector w
   w=apply(data,2,mean)
@@ -32,7 +35,7 @@ mycltp=function(n,iter,lambda=10,...){
   ymax=1.1*ymax
 
   ## Make a suitable layout for graphing
-  layout(matrix(c(1,1,2,3),nr=2,nc=2, byrow=TRUE))
+  layout(matrix(c(1,1,2,3),nrow=2,ncol=2, byrow=TRUE))
 
   ## Now we can make the histogram
   hist(w,freq=FALSE,  ylim=c(0,ymax), col=rainbow(max(w)),

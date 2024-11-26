@@ -5,13 +5,14 @@
 #' @param mu the mean of the distribution
 #' @param sigma the standard deviation of the distribution
 #' @param a the value of x you want to evaluate at
-#'
-#' @return the plotted curve with the region and the area of the region
-#'
+#' @param x is the vector of values
+#' @importFrom grDevices rainbow
+#' @importFrom graphics abline axis barplot curve hist layout lines points polygon segments text
+#' @importFrom stats dnorm dpois pbinom pnorm quantile rpois t.test var
 #' @example myncurve(2, 4 ,1)
 #'
 #' @export
-myncurve = function(mu, sigma, a=1){
+myncurve = function(x,mu, sigma, a=1){
   curve(dnorm(x,mean=mu,sd=sigma), xlim = c(mu-3*sigma, mu +
                                               3*sigma))
   list(mu = mu, sigma = sigma)

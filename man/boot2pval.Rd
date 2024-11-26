@@ -11,6 +11,14 @@ boot2pval(x1, x2, conf.level = 0.95, iter = 3000, mudiff = 0, test = "two")
 \item{x1}{is the first sample}
 
 \item{x2}{is the second sample}
+
+\item{conf.level}{is the confidence level}
+
+\item{iter}{is the amount of times}
+
+\item{mudiff}{is the difference in means}
+
+\item{test}{is the type of test}
 }
 \description{
 Performs a t.test to calculate the confidence interval for the mean of two random samples.

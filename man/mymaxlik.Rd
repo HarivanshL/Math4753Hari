@@ -12,6 +12,8 @@ mymaxlik(lfun, x, param, ...)
 \item{x}{iss the vector of values}
 
 \item{param}{is the target parameter to find the likelihood}
+
+\item{...}{arguments to change specific parts}
 }
 \description{
 Calculates the max likelihood given a parameter and a set of values

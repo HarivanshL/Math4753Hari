@@ -5,8 +5,10 @@
 #' @param lfun is the function used to calculate the likelihood
 #' @param x iss the vector of values
 #' @param param is the target parameter to find the likelihood
-#'
-#'
+#' @param ... arguments to change specific parts
+#' @importFrom grDevices rainbow
+#' @importFrom graphics abline axis barplot curve hist layout lines points polygon segments text
+#' @importFrom stats dnorm dpois pbinom pnorm quantile rpois t.test var
 #' @example mymaxlik(lfun=logbin, x=c(9,9,1,9,9,9),param=seq(0,1,length=1000))
 #'
 #' @export

@@ -5,7 +5,9 @@
 #' @param success number of successes
 #' @param trials number of trials
 #' @param prob probability of success
-#'
+#' @importFrom grDevices rainbow
+#' @importFrom graphics abline axis barplot curve hist layout lines points polygon segments text
+#' @importFrom stats dnorm dpois pbinom pnorm quantile rpois t.test var
 #' @return p_binom(success, trials, prob)
 #'
 #' @example check_p_ binom(8, 15, 0.4)

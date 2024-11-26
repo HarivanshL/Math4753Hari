@@ -13,6 +13,8 @@ mycltp(n, iter, lambda = 10, ...)
 \item{iter}{the number of times to iterate per sample}
 
 \item{lambda}{the average number of events in the time interval}
+
+\item{...}{arguments to change specific parts}
 }
 \description{
 This function shows the application of the central limit theorem
