@@ -10,7 +10,7 @@
 #' @importFrom stats dnorm dpois pbinom pnorm quantile rpois t.test var
 #' @return p_binom(success, trials, prob)
 #'
-#' @example check_p_ binom(8, 15, 0.4)
+#' @example check_p_binom(8, 15, 0.4)
 #'
 #' @export
 check_p_binom <- function(success, trials, prob){
